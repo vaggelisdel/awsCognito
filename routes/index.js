@@ -56,8 +56,8 @@ router.post('/signin', function (req, res, next) {
     var authenticationData = {
         // Username: req.body.username,
         // Password: req.body.password,
-        Username: 'vaggelisdel',
-        Password: 'Del12345!@#$%',
+        Username: req.body.username,
+        Password: req.body.password,
     };
     var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(
         authenticationData
@@ -65,7 +65,7 @@ router.post('/signin', function (req, res, next) {
 
     var userData = {
         // Username: req.body.username,
-        Username: 'vaggelisdel',
+        Username: req.body.username,
         Pool: userPool,
     };
     var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
