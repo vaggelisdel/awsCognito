@@ -71,7 +71,7 @@ router.post('/signin', function (req, res, next) {
     var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
     cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: function (result) {
-            sess.accesstoken = result.getIdToken().getJwtToken();
+            sess.accesstoken = result.getAccessToken().getJwtToken();
             // console.log(result.getIdToken().getJwtToken());
             console.log("Connected!!");
             res.redirect('/dashboard');
