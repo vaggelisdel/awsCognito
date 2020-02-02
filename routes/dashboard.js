@@ -30,6 +30,7 @@ router.use(function (req, res, next) {
         //If API is not authenticated, Return 401 with error message.
         if (err) return res.status(401).send(err);
 
+        console.log(response);
         //Else API has been authenticated. Proceed.
         res.locals.user = response;
         next();
