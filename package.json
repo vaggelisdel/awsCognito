@@ -1,0 +1,29 @@
+{
+  "name": "awscognito",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "amazon-cognito-identity-js": "^3.2.2",
+    "cognito-express": "^2.0.16",
+    "cookie-parser": "~1.4.4",
+    "cross-fetch": "^3.0.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-session": "^1.17.0",
+    "hbs": "^4.1.0",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.3",
+    "morgan": "~1.9.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.7",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
